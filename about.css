@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.logo{
+position: sticky;
+/* border: 2px solid black; */
+height: 75px;
+width: 75%;
+left: 150px;
+margin: auto;
+}
+.logo img{
+    position: relative;
+    left: 0px;
+}
+
+.logo span{
+    position: relative;
+    left: 20px;
+    font-size: 30px;
+    top: 13px;
+}
+
+.aboutSection{
+    background:rgba(0, 0, 0, 0.7) url(https://www.lntecc.com/images/careers/career-slider2.jpg);
+    background-size: 100% 100%;
+    background-blend-mode: darken;
+    height: 60vh;
+    width: 100%;
+    position: relative;
+    top: -75px;
+}
+
+.aboutSection .aboutImage{
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    max-width: 900px;
+    text-align: center;
+}
+.aboutSection .aboutImage h2{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size:3em;
+}
+.aboutSection .aboutImage p{
+    color: #fff;
+    font-size: 1.2em;
+}
