@@ -53,9 +53,18 @@ margin: auto;
 }
 
 .contactDis{
-    font-size: 12px;
+    font-size: 13px;
 }
 
+.spinnerBox{
+    background:skyblue;
+}
 
+.spinnerBox .spinner-border{
+    position: relative;
+    left: 50%;
+}
 
-/* contact form */
+.Hrline{
+ 	width: 50%;
+}

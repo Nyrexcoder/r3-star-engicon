@@ -40,9 +40,13 @@
   background-size:cover ;
 }
   </style>
-  <body>
+   <body onload="pageLoding()">
+    <!-- Page loader -->
+    <div id="preloader">
+    </div>
+
     <div class="logo" style="z-index: 9999; position: sticky; top: 0; background-color: white;">
-        <img src="roadlogo.jpg" alt="logo" style="height: 75px;">
+        <img src="Assets/roadlogo.jpg" alt="logo" style="height: 75px;">
         <span> <font color="#0D0754" style="font-family: 'Patua One', cursive;">R3 STAR ENGICON PRIVATE LIMITED</font></span>
     
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FFBF00; position: sticky; left: 150px; width: 100%;
@@ -65,10 +69,11 @@
                 Services
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="building.html"><img src="Assets/office-building.png" style="width: 20px; height: 20px;" alt=""> Buildings</a></li>
+                <li><a class="dropdown-item" href="infrastructure.html"><img src="Assets/bridge.png" style="width: 20px; height: 20px;" alt=""> Infrastructure</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li><a class="dropdown-item" href="industrial.html"><img src="Assets/factory.png" style="width: 20px; height: 20px;" alt=""> Industrial</a></li>
+                <li><a class="dropdown-item" href="power.html"><img src="Assets/power-plant.png" style="width: 20px; height: 20px;" alt=""> Power</a></li>
               </ul>
             </li>
             <li class="nav-item">
@@ -95,33 +100,39 @@
         <div style="display: block;position: relative;top: 200px; left: 0;">
           <h2>Contact US</h2>
           <hr style="color: white; width: 50%; margin: auto;">
+          <p>Ask how we can help you.</p>
         </div>
   
       </div>
     </section>
   </header>  
 
-
   <section>
-<div class="container">
-  <div class="row row-cols-2">
-    <div class="col mt-2"><h5>Corporate Office:</h5><p class="contactDis">6th Floor, Kalpataru Synergy, Opp. Grand Hyatt, Santacruz (East),<br>
-      Mumbai 400 055
-      <br>
-      Phone no.: +91 22 6885 1500;   Fax: +91 22 6885 1555</p></div>
-
-    <div class="col mt-2"><h5>Registered office:</h5><p class="contactDis">A-104, Shapath-4, Opp. Karnavati Club, S. G. Road, Ahmedabad 380 015 <br>
-      Phone no.: +91 79 6816 1500 ; Fax : +91 79 6816 1560</p></div>
-    <!-- <div class="col mt-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, molestias alias. Voluptatum, in? Perferendis amet delectus voluptatum non eos nulla, nihil neque vel aut perspiciatis accusamus. Ipsum eveniet vitae voluptas?</div> -->
-    <!-- <div class="col mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ad maxime necessitatibus, quia ab expedita repellendus placeat voluptas delectus illo veritatis amet veniam fugit. Odio eos quasi ea corrupti in?</div> -->
-  </div>
-</div>
+    <div class="container">
+      <div class="row mb-3">
+        <div class="col-sm-4"><h5>Registered Address:</h5><hr class="Hrline"></div>
+        <div class="col-sm-8"><i class="fa fa-building-o" aria-hidden="true"></i>	1197/3, Ground Floor, Surbhi Vihar Colony Harishchandra Nagar, Near Mithapur Bus Stand Dhelwan Patna BR 800020 IN. <br>
+        <i class="fa fa-phone" aria-hidden="true"></i> Phone no.: +91 xx xxxx xxxx; <br>
+        <i class="fa fa-envelope" aria-hidden="true"></i> Email : <a href="mailto: r3starengicon@gmail.com">r3starengicon@gmail.com</a>
+        </div>
+      </div>
   </section>
 
 
   <section style="background:rgb(211, 211, 231)">
+    <div class="container pt-3" style="text-align: center;"><h3>Lest's Start a Conversation.</h3>
+      <hr style="width: 50%; margin: auto;">
+      <p>*all fields are mandatory</p>
+    </div>
 <!-- form section -->
 <div class="container pt-5">
+
+  <div class="spinnerBox d-none" id="spinnerBox">
+  <div class="spinner-border ml-5" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+
   <div class="row">
     <div class="col-md-8">
 
@@ -159,125 +170,125 @@
           <textarea class="form-control" id="message" name="Reason for Approaching Us" rows="3" required></textarea>
         </div>
 
-        <!-- <div class="g-recaptcha" data-sitekey="6Ldi-DwdAAAAACne384c-EgD1UuGwZWYuHnCxKZ3"required></div>
-      <br/> -->
+        <div class="g-recaptcha" data-sitekey="6Ldi-DwdAAAAACne384c-EgD1UuGwZWYuHnCxKZ3"required></div>
+      <br/>
 
         <div class="col-12">
-          <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+          <button type="submit" class="btn btn-warning" id="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i> Submit</button>
+          <button type="reset" class="btn btn-danger"><i class="fa fa-refresh" aria-hidden="true"></i> Reset</button>
         </div>
       </form>
-
+      
     </div>
 
 
-    <div class="col-sm-4"><img  style="width: 100%;" src="contact.png" alt=""></div>
+    <div class="col-sm-4"><img  style="width: 100%;" src="Assets/contact.png" alt=""></div>
 </div>
 
-      <img src="footer_top.png" alt="bridge-picture" style="display: block; margin: auto; position: relative; top: 16px;width: 100%;">
+      <img src="Assets/footer_top.png" alt="bridge-picture" style="display: block; margin: auto; position: relative; top: 16px;width: 100%;">
       <hr style="border: none; width: 50%; margin: auto;">
   </section>
 
 
   <footer class="bg-dark text-white pt-5 pb-4">
-  <div class="container text-center text-md-left">
-    <div class="row text-center text-md-left">
-      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-        <h5 class="text-uppercase mb-4 font-weight-bold"><font color="#245F81">R3 STAR ENGICON PVT. LTD.</font></h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, ducimus repellat, rerum sunt exercitationem culpa ad assumenda quibusdam quod dolorem ipsum perspiciatis harum quae eos porro praesentium veniam pariatur incidunt!</p>
+    <div class="container text-center text-md-left">
+      <div class="row text-center text-md-left">
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold"><strong style="color: #FFBF00; font-size: 19px;">R3 STAR ENGICON PVT. LTD.</strong></h5>
+          <p class="footeF">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, ducimus repellat, rerum sunt exercitationem culpa ad assumenda quibusdam quod dolorem ipsum perspiciatis harum quae eos porro praesentium veniam pariatur incidunt!</p>
+        </div>
+    
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold"><strong style="color: #FFBF00; font-size: 19px;">Services</strong></h5>
+          <p class="footeF">
+            <a href="infrastructure.html" class="text-white" style="text-decoration: none;">INFRASTRUCTURE</a>
+          </p>
+          <p class="footeF">
+            <a href="industrial.html" class="text-white" style="text-decoration: none;">INDUSTRIAL</a>
+          </p>
+          <p class="footeF">
+            <a href="building.html" class="text-white" style="text-decoration: none;">BUILDIGS</a>
+          </p>
+          <p class="footeF">
+            <a href="power.html" class="text-white" style="text-decoration: none;">POWER</a>
+          </p>
+        </div>
+    
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold"><strong style="color: #FFBF00; font-size: 19px;">Useful Links</strong></h5>
+          <p class="footeF">
+            <a href="index.html" class="text-white" style="text-decoration: none;">Home</a>
+          </p>
+          <p class="footeF">
+            <a href="about.html" class="text-white" style="text-decoration: none;">About</a>
+          </p>
+          <p class="footeF">
+            <a href="gallery.html" class="text-white" style="text-decoration: none;">Gallery</a>
+          </p>
+          <p class="footeF">
+            <a href="contact.html" class="text-white" style="text-decoration: none;">Contact</a>
+          </p>
+        </div>
+    
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold"><strong><a style="text-decoration: none; color: #FFBF00; font-size: 19px;" href="contact.html">Contact</a></strong></h5>
+          <p class="footeF">
+            <i class="fas fa-home mr-3"> 1197/3, Ground Floor, Surbhi Vihar Colony Harishchandra Nagar, Near Mithapur Bus Stand Dhelwan Patna BR 800020 IN.</i>
+          </p>
+    
+          <p class="footeF">
+            <i class="fas fa-envelope mr-3"> <a href="mailto:r3starengicon@gmail.com" style="text-decoration: none;">r3starengicon@gmail.com</a></i>
+          </p class="footeF">
+    
+          <p class="footeF">
+            <i class="fas fa-phone mr-3">+91 XXXXXXXX</i>
+          </p>
+          <!-- <p class="footeF">
+          <i class="fas fa-print mr-3">+X XXXXXXXXX</i>
+          </p> -->
+        </div>
       </div>
-  
-      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-        <h5 class="text-uppercase mb-4 font-weight-bold"><font color="#245F81">Products</font></h5>
-        <p>
-          <a href="" class="text-white" style="text-decoration: none;">TheProviders</a>
-        </p>
-        <p>
-          <a href="" class="text-white" style="text-decoration: none;">Creativity</a>
-        </p>
-        <p>
-          <a href="" class="text-white" style="text-decoration: none;">SourceFile</a>
-        </p>
-        <p>
-          <a href="" class="text-white" style="text-decoration: none;">Bootstrap</a>
-        </p>
-      </div>
-  
-      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-        <h5 class="text-uppercase mb-4 font-weight-bold"><font color="#245F81">Useful Links</font></h5>
-        <p>
-          <a href="" class="text-white" style="text-decoration: none;">Your Account</a>
-        </p>
-        <p>
-          <a href="" class="text-white" style="text-decoration: none;">Become an Affiliates</a>
-        </p>
-        <p>
-          <a href="" class="text-white" style="text-decoration: none;">Shipping Rates</a>
-        </p>
-        <p>
-          <a href="" class="text-white" style="text-decoration: none;">Help</a>
-        </p>
-      </div>
-  
-      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-        <h5 class="text-uppercase mb-4 font-weight-bold"><font color="#245F81">Contact</font></h5>
-        <p>
-          <i class="fas fa-home mr-3">Muzaffarpur Bihar</i>
-        </p>
-        <p>
-          <i class="fas fa-envelope mr-3">xyz@gmail.com</i>
-        </p>
-        <p>
-          <i class="fas fa-phone mr-3">+91 XXXXXXXX</i>
-        </p>
-        <i class="fas fa-print mr-3">+X XXXXXXXXX</i>
-        </p>
-      </div>
+    
+      <hr class="mb-4">
+        <div class="row align-item-center">
+    <div class="col-md-7 col-lg-8">
+    <p>&copy; 2022 All Copyright Reserved
+      <a href="" style="text-decoration: none;"></a>
+    </p>
+    
     </div>
-  
-    <hr class="mb-4">
-      <div class="row align-item-center">
-  <div class="col-md-7 col-lg-8">
-  <p>Copyright 2022 All right reserved by:
-    <a href="" style="text-decoration: none;"><strong><font color="#245F81"> The TheProviders</font></strong></a>
-  </p>
-  
-  </div>
-  
-  <div class="col-md-5 col-lg-4">
-  <div class="text-center text-md-right">
-  
-    <ul class="list-unstyled list-inline">
-      <li class="list-inline-item">
-        <a href="" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-facebook"></i></a>
-      </li>
-  
-      <li class="list-inline-item">
-        <a href="" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-twitter"></i></a>
-      </li>
-  
-      <li class="list-inline-item">
-        <a href="" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-google-plus"></i></a>
-      </li>
-  
-      <li class="list-inline-item">
-        <a href="" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-linkedin-in"></i></a>
-      </li>
-  
-      <li class="list-inline-item">
-        <a href="" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-youtube"></i></a>
-      </li>
-    </ul>
-  </div>
-  </div>
-      </div>
-    </hr>
-  </div>
-  </footer>
+    
+    <div class="col-md-5 col-lg-4">
+    <div class="text-center text-md-right">
+    
+      <ul class="list-unstyled list-inline">
+        <li class="list-inline-item">
+          <a href="" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-facebook"></i></a>
+        </li>
+    
+        <li class="list-inline-item">
+          <a href="" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-twitter"></i></a>
+        </li>
+    
+        <li class="list-inline-item">
+          <a href="" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-google-plus"></i></a>
+        </li>
+    
+      </ul>
+    </div>
+    </div>
+        </div>
+      </hr>
+    </div>
+    </footer>
   
    <!-- Option 1: Bootstrap Bundle with Popper -->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   
+   <!-- custome script -->
+ <script src="common.js"></script>
+
    <!-- form vallidation -->
    <script>
      $(document).ready(function(){
@@ -328,8 +339,10 @@
        }
      }
   
+     
    </script>
 
+    
  
   </body>
   </html>

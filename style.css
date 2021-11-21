@@ -3,6 +3,19 @@
     margin: 0;
     box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;
+}
+#preloader{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background:#fff url('Assets/crane\ pageloader.gif')
+  no-repeat center;
+  background-size: 20%;
+  z-index: 999999;
+}
+
 .logo{
 position: sticky;
 /* border: 2px solid black; */
@@ -220,3 +233,26 @@ overflow: hidden;
 }
 
   }
+
+@media screen and (max-width: 795px){
+  .logo span{
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 300px){
+  .logo span{
+    font-size: 12px;
+  }
+}
+  /* secvices */
+.sCardTitles{
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+}
+.footeF{
+  font-size: 13px;
+  font-family: Poppins,sans-serif;
+}
+
