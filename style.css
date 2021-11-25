@@ -16,6 +16,88 @@ html{
   z-index: 999999;
 }
 
+/* scroll Down Button  */
+.srollDown{
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50px;
+}
+.srollDown::before{
+  content: '';
+  position: absolute;
+  left: -10px;
+  bottom: 0;
+  width: 10px;
+  height: 10px;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(-45deg);
+}
+.srollDown::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -6px;
+  width: 2px;
+  height: 50px;
+  background: #fff;
+  animation: animate 2s linear infinite;
+}
+@keyframes animate{
+  0%{
+    transform-origin: top;
+    transform: scaleY(0) ;
+  }
+
+  45%{
+    transform-origin: top;
+    transform: scaleY(1) ;
+  }
+
+  55%{
+    transform-origin: bottom;
+    transform: scaleY(1) ;
+  }
+  100%{
+    transform-origin: bottom;
+    transform: scaleY(0) ;
+  }
+}
+
+.srollDown p{
+  position: absolute;
+  text-align: center;
+  width: 180px;
+  top:180%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  color: #fff;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: red; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
 .logo{
 position: sticky;
 /* border: 2px solid black; */
@@ -76,17 +158,17 @@ overflow: hidden;
     left: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.6) url(https://images.unsplash.com/photo-1625722662233-297060231b85?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80)no-repeat;
+    background: rgba(0, 0, 0, 0.5) url(https://images.unsplash.com/photo-1625722662233-297060231b85?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80)no-repeat;
     background-size:cover;
     background-blend-mode: darken;
     border-radius: 0 0 50% 50%/0 0 100% 100%;
-    transform: scaleX(1.5);
+    transform: scaleX(2.0);
     animation: slider 12s infinite linear;
 }
 @keyframes slider{
-    0%{background: rgba(0,0,0,0.6) url(https://images.unsplash.com/photo-1625722662233-297060231b85?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80)no-repeat; background-size:cover ;background-blend-mode: darken;}
-    35%{background: rgba(0,0,0,0.6) url(https://media.istockphoto.com/photos/compressor-station-picture-id171209447?b=1&k=20&m=171209447&s=170667a&w=0&h=bHsom9Iz3GVzUYSAG2-lCcQbyEV437_RCp6-aGM7uI8=)no-repeat;background-size:cover ;background-blend-mode: darken;}
-    75%{background: rgba(0,0,0,0.6) url(https://images.unsplash.com/photo-1612878100556-032bbf1b3bab?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8amNifGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60)no-repeat;background-size:cover ;background-blend-mode: darken;}
+    0%{background: rgba(0,0,0,0.5) url(https://images.unsplash.com/photo-1625722662233-297060231b85?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80)no-repeat; background-size:cover ;background-blend-mode: darken;}
+    35%{background: rgba(0,0,0,0.5) url(https://media.istockphoto.com/photos/compressor-station-picture-id171209447?b=1&k=20&m=171209447&s=170667a&w=0&h=bHsom9Iz3GVzUYSAG2-lCcQbyEV437_RCp6-aGM7uI8=)no-repeat;background-size:cover ;background-blend-mode: darken;}
+    75%{background: rgba(0,0,0,0.5) url(https://images.unsplash.com/photo-1612878100556-032bbf1b3bab?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8amNifGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60)no-repeat;background-size:cover ;background-blend-mode: darken;}
 }
 .ImageSliding .content{
     position: relative;
@@ -231,6 +313,9 @@ overflow: hidden;
 .footerImg{
   height: 40px;
 }
+.srollDown{
+  top: 110%;
+}
 
   }
 
@@ -238,11 +323,17 @@ overflow: hidden;
   .logo span{
     font-size: 15px;
   }
+  .srollDown{
+    top: 110%;
+  }
 }
 
 @media screen and (max-width: 300px){
   .logo span{
     font-size: 12px;
+  }
+  .srollDown{
+    top: 110%;
   }
 }
   /* secvices */
@@ -251,8 +342,10 @@ overflow: hidden;
   color: black;
   font-weight: bolder;
 }
+
 .footeF{
   font-size: 13px;
   font-family: Poppins,sans-serif;
 }
+
 
