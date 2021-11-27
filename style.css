@@ -349,8 +349,11 @@ overflow: hidden;
 }
 
 .footeF{
-  font-size: 13px;
-  font-family: Poppins,sans-serif;
+  font-size: 12px !important;
+  font-family: Poppins,sans-serif !important;
+}
+.col-lg-4{
+  width: 100% !important;
 }
 
-
+/* pdf link css */
