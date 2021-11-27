@@ -42,21 +42,6 @@
 .home{
   background-size:cover ;
 }
-
-/* Make sure nothing inside buttons can send click events so we can catch button clicks with delegated events. */
-button * {
-  pointer-events: none;
-}
-
-/* Just a really naive css example to swap the button contents with the spinner. Bring your own spinner & styles. */
-.loading {
-  opacity: .5;
-}
-.loading span {
-  display: none;
-}
-
-
   </style>
    <body onload="pageLoding()">
     <!-- Page loader -->
@@ -159,7 +144,7 @@ button * {
   <div class="row">
     <div class="col-md-8">
 
-      <form id="example" class="row g-3 contact_form" action="https://formsubmit.co/neerajkumar.muzf@gmail.com" method="POST" enctype="multipart/form-data">
+      <form class="row g-3 contact_form" action="https://formsubmit.co/neerajkumar.muzf@gmail.com" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_next" value="https://nyrexcoder.github.io/r3-star-engicon/success.html">
         <div class="col-md-6" data-aos="fade-right">
@@ -362,6 +347,8 @@ button * {
          return false;
        }
      }
+  
+     
    </script>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -370,78 +357,6 @@ button * {
     offset: 150,
     duration: 1000
   });
-</script>
-
-<script>
-
-/* Example on how to use this at the bottom here. Implementation first. */
-
-function LoadingSpinner (form, spinnerHTML) {
-  form = form || document
-
-  //Keep track of button & spinner, so there's only one automatic spinner per form
-  var button
-  var spinner = document.createElement('div')
-  spinner.innerHTML = spinnerHTML
-  spinner = spinner.firstChild
-
-  //Delegate events to a root element, so you don't need to attach a spinner to each individual button.
-  form.addEventListener('click', start)
-
-  //Stop automatic spinner if validation prevents submitting the form
-  //Invalid event doesn't bubble, so use capture
-  form.addEventListener('invalid', stop, true)
-
-  //Start spinning only when you click a submit button
-  function start (event) {
-    if (button) stop()
-    button = event.target
-    if (button.type === 'submit') {
-      LoadingSpinner.start(button, spinner)
-    }
-  }
-
-  function stop () {
-    LoadingSpinner.stop(button, spinner)
-  }
-
-  function destroy () {
-    stop()
-    form.removeEventListener('click', start)
-    form.removeEventListener('invalid', stop, true)
-  }
-
-  return {start: start, stop: stop, destroy: destroy}
-}
-
-//I guess these would be called class methods. They're useable without instantianing a new LoadingSpinner so you can start & stop spinners manually on any elements, for ajax and stuff.
-LoadingSpinner.start = function (element, spinner) {
-  element.classList.add('loading')
-  return element.appendChild(spinner)
-}
-
-LoadingSpinner.stop = function (element, spinner) {
-  element.classList.remove('loading')
-  return spinner.remove()
-}
-
-
-
-
-//Example on how to use LoadingSpinner
-
-//Bring your own spinner. You can use any html as the spinner. You can find lots of cool spinners for example here on Codepen. I'm using just plain text. Maybe technically not a spinner, but this is more about the script than graphics.
-var exampleForm = document.querySelector('#example')
-var exampleLoader = new LoadingSpinner(exampleForm, '...')
-//Delay submit so you can see the spinner spinning, then stop the loading spinner instead of submitting because we're on Codepen.
-exampleForm.addEventListener('submit', function (event) {
-  event.preventDefault()
-  setTimeout(function () {
-    exampleLoader.stop()
-  }, 2000)
-})
-
-
 </script>
  
   </body>
