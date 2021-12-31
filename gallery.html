@@ -99,65 +99,82 @@
     </section>
   </header> 
 <!-- Display Gallery -->
-<section class="gallery">
-  <input type="radio" name="Photos" id="check1" checked>
-  <input type="radio" name="Photos" id="check2">
-  <input type="radio" name="Photos" id="check3">
-  <input type="radio" name="Photos" id="check4">
-
-  <div class="container" style="width: 100%; text-align: center;">
-    <h1>OUR PROJECT GALLERY</h1>
-    <div class="top-content">
-      <h3>Project Gallery</h3>
-      <label for="check1">All Photos</label>
-      <label for="check2">BUILDIGS</label>
-      <label for="check3">INFRASTRUCTURE</label>
-      <label for="check4">INDUSTRIAL</label>
-    </div>
-
-    <div class="photo-gallery">
-      <!-- <div class="pic place">
-        <img src="" alt="">
-      </div>
-      <div class="pic family">
-        <img src="" alt="">
-      </div>
-      <div class="pic child">
-        <img src="" alt="">
-      </div>
-      <div class="pic place">
-        <img src="" alt="">
-      </div>
-      <div class="pic family">
-        <img src="" alt="">
-      </div>
-      <div class="pic child">
-        <img src="" alt="">
-      </div>
-      <div class="pic place">
-        <img src="" alt="">
-      </div>
-      <div class="pic family">
-        <img src="" alt="">
-      </div>
-      <div class="pic child">
-        <img src="" alt="">
-      </div>
-      <div class="pic place">
-        <img src="" alt="">
-      </div>
-      <div class="pic family">
-        <img src="" alt="">
-      </div>
-      <div class="pic child">
-        <img src="" alt="">
-      </div> -->
-    </div>
-
+<section class="gallerySection">
+  <div class="container text-center">
+    <h1>Sorry No Data Found!</h1>
   </div>
+<!-- <div class="button-group filters-button-group">
+  <button class="button is-checked" data-filter="*">all</button>
+  <button class="button" data-filter=".beach">beach</button>
+  <button class="button" data-filter=".bird">bird</button>
+  <button class="button" data-filter=".boat">boat</button>
+  <button class="button" data-filter=".lighthouse">lighthouse</button>
+  <button class="button" data-filter=".people">people</button>
+  <button class="button" data-filter=".rock">rock</button>
+  <button class="button" data-filter=".sea">sea</button> -->
+</div>
+
+<section id="grid-container" class="transitions-enabled fluid masonry js-masonry grid">
+  <!-- <article class="beach people sea">
+      <img src="https://cdn2.hubspot.net/hub/322787/hubfs/MYCHEFCOM/hackathon/photos-gallery/beach1.jpg" class="img-responsive" />
+  </article>
+  <article class="beach bird">
+      <img src="https://cdn2.hubspot.net/hub/322787/hubfs/MYCHEFCOM/hackathon/photos-gallery/bird3.jpg" class="img-responsive" />
+  </article>
+  <article class="sea">
+      <img src="https://cdn2.hubspot.net/hub/322787/hubfs/MYCHEFCOM/hackathon/photos-gallery/sea2.jpg" class="img-responsive" />
+  </article>
+  <article class="beach people rock sea">
+      <img src="https://cdn2.hubspot.net/hub/322787/hubfs/MYCHEFCOM/hackathon/photos-gallery/beach2.jpg" class="img-responsive" />
+  </article>
+  <article class="beach sea">
+      <img src="https://cdn2.hubspot.net/hub/322787/hubfs/MYCHEFCOM/hackathon/photos-gallery/beach3.jpg" class="img-responsive" />
+  </article>
+  <article class="bird">
+      <img src="https://cdn2.hubspot.net/hub/322787/hubfs/MYCHEFCOM/hackathon/photos-gallery/bird1.jpg" class="img-responsive" />
+  </article>
+  <article class="bird">
+      <img src="https://cdn2.hubspot.net/hub/322787/hubfs/MYCHEFCOM/hackathon/photos-gallery/bird2.jpg" class="img-responsive" />
+  </article>
+  <article class="sea">
+      <img src="https://cdn2.hubspot.net/hub/322787/hubfs/MYCHEFCOM/hackathon/photos-gallery/sea4.jpg" class="img-responsive" />
+  </article>
+  <article class="lighthouse rock sea">
+      <img src="https://cdn2.hubspot.net/hub/322787/hubfs/MYCHEFCOM/hackathon/photos-gallery/lighthouse1.jpg" class="img-responsive" />
+  </article>
+  <article class="boat">
+      <img src="https://cdn2.hubspot.net/hub/322787/hubfs/MYCHEFCOM/hackathon/photos-gallery/boat2.jpg" class="img-responsive" />
+  </article>
+  <article class="lighthouse sea">
+      <img src="https://cdn2.hubspot.net/hub/322787/hubfs/MYCHEFCOM/hackathon/photos-gallery/lighthouse2.jpg" class="img-responsive" />
+  </article>
+  <article class="beach people">
+      <img src="https://cdn2.hubspot.net/hub/322787/hubfs/MYCHEFCOM/hackathon/photos-gallery/people1.jpg" class="img-responsive" />
+  </article>
+  <article class="rock sea">
+      <img src="https://cdn2.hubspot.net/hub/322787/hubfs/MYCHEFCOM/hackathon/photos-gallery/rock3.jpg" class="img-responsive" />
+  </article>
+  <article class="boat lighthouse sea">
+      <img src="https://cdn2.hubspot.net/hub/322787/hubfs/MYCHEFCOM/hackathon/photos-gallery/boat1.jpg" class="img-responsive" />
+  </article>
+  <article class="boat sea">
+      <img src="https://cdn2.hubspot.net/hub/322787/hubfs/MYCHEFCOM/hackathon/photos-gallery/sea1.jpg" class="img-responsive" />
+  </article>
+  <article class="rock sea">
+      <img src="https://cdn2.hubspot.net/hub/322787/hubfs/MYCHEFCOM/hackathon/photos-gallery/rock2.jpg" class="img-responsive" />
+  </article>
+  <article class="beach">
+      <img src="https://cdn2.hubspot.net/hub/322787/hubfs/MYCHEFCOM/hackathon/photos-gallery/beach4.jpg" class="img-responsive" />
+  </article>
+  <article class="rock sea">
+      <img src="https://cdn2.hubspot.net/hub/322787/hubfs/MYCHEFCOM/hackathon/photos-gallery/sea3.jpg" class="img-responsive" />
+  </article>
+  <article class="people rock sea">
+      <img src="https://cdn2.hubspot.net/hub/322787/hubfs/MYCHEFCOM/hackathon/photos-gallery/rock1.jpg" class="img-responsive" />
+  </article> -->
 </section>
 
-
+</section>
   <section style="background:rgb(211, 211, 231)">
 
           <img src="Assets/footer_top.png" alt="bridge-picture" style="display: block; margin: auto; position: relative; top: 16px;width: 100%;">
@@ -170,7 +187,7 @@
           <div class="row text-center text-md-left">
             <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
               <h5 class="text-uppercase mb-4 font-weight-bold"><strong style="color: #FFBF00; font-size: 19px;">R3 STAR ENGICON PVT. LTD.</strong></h5>
-              <p class="footeF">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, ducimus repellat, rerum sunt exercitationem culpa ad assumenda quibusdam quod dolorem ipsum perspiciatis harum quae eos porro praesentium veniam pariatur incidunt!</p>
+              <p class="footeF">R3 STAR ENGICON Private Limited Offers World-Class Solutions for The Construction of Roads, Bridges and Buildings, Relying on Company’s Expertise, Aesthetic Excellence, Publics Comfort And Cost Efficiency. Its Journey Is Characterized by The Hard Work, Respect for Relationship, And Drive to Excel in Anything They Take Up. This is the premise for establishing a culture of engagement in It’s credo. Perfecting past knowledge and recapitulating this expertise makes us perform better and faster. It Provides Collaborative Engagement Pro- Creates Innovation, Which Ultimately Creates a Better & Sustainable Future. This Underlines That R3 STAR ENGICON Pursuits of Excellence Is Just a Manifestation of Achieving Customer Delight and Trust.</p>
             </div>
         
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
@@ -213,7 +230,7 @@
               </p class="footeF">
         
               <p class="footeF">
-              Phone - +91 XXXXXXXX
+              <!-- Phone - +91 XXXXXXXX -->
               </p>
               <!-- <p class="footeF">
               <i class="fas fa-print mr-3">+X XXXXXXXXX</i>
@@ -240,12 +257,12 @@
             </li>
         
           </ul> -->
-          <p><font color="#FFBF00">Discaimer</font> - Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem illum porro at, similique architecto iste!</p>
+          <p style="font-size: 0.8rem;"><font color="#FFBF00" style="font-size: 1rem;">Disclaimer</font> - Welcome to R3 Star Engicon pvt. ltd. website. The contents of this website are for general informational purposes only.</p>
         </div>
         </div>
         <div class="row">
           <div class="col-md-7 col-lg-8">
-          <p>&copy; 2022 All Copyright Reserved
+          <p>&copy; 2022 All Rights Reserved
             <a href="" style="text-decoration: none;"></a>
           </p>
           
@@ -270,6 +287,46 @@
        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
        <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 
+
+       <script>
+         $( function() {
+  var $grid = $('.grid').isotope({
+    itemSelector: 'article'
+  });
+
+  // filter buttons
+  $('.filters-button-group').on( 'click', 'button', function() {
+    var filterValue = $( this ).attr('data-filter');
+    $grid.isotope({ filter: filterValue });
+  });
+  $('.button-group').each( function( i, buttonGroup ) {
+    var $buttonGroup = $( buttonGroup );
+    $buttonGroup.on( 'click', 'button', function() {
+      $buttonGroup.find('.is-checked').removeClass('is-checked');
+      $( this ).addClass('is-checked');
+    });
+  });
+});
+
+// debounce so filtering doesn't happen every millisecond
+function debounce( fn, threshold ) {
+  var timeout;
+  return function debounced() {
+    if ( timeout ) {
+      clearTimeout( timeout );
+    }
+    function delayed() {
+      fn();
+      timeout = null;
+    }
+    timeout = setTimeout( delayed, threshold || 100 );
+  }
+}
+
+$(window).bind("load", function() {
+  $('#all').click();
+});
+       </script>
 
       </body>
       </html>
